@@ -89,3 +89,12 @@ class API:
         if not parsed_data:
             print("No data to save.")
             return
+        
+        try:
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.DictWriter(file, fieldnames=parsed_data.keys())
+                writer.writeheader()
+                writer.writerow(parsed_data)
+            print(f"Data successfully saved to {filename}")
+        except IOError as e:
+            print(f"Failed to save data to CSV: {e}")
