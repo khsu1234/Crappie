@@ -21,12 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="APIPackage\APIUtilities.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="APIPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\main.py" />
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="APIPackage\" />
     <Folder Include="mainPackage\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
