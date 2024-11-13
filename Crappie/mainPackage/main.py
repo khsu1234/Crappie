@@ -15,7 +15,7 @@
 
 import requests
 import csv
-from apiPackage.api import API
+from APIPackage.APIUtilities import API
 
 API_KEY = 'a1bd1e2876ca38ce51fdc546e239d308'
 SYMBOL = 'AAPL'
